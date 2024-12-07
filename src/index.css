@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .text-shadow {
+    text-shadow: -6px 6px 10px rgba(0, 0, 0, 0.4);
+  }
+}
+
+@layer utilities {
+  .img-shadow {
+    filter: drop-shadow(-6px 8px 15px rgba(0, 0, 0, 0.4));
+  }
+}
+/* Hide scrollbar but allow scrolling */
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hidden {
+  -ms-overflow-style: none;  /* for Internet Explorer 10+ */
+  scrollbar-width: none; /* for Firefox */
+}
+
+/* Blobs Animation */
+@keyframes blobAnimation {
+  0% {
+    transform: scale(0.7);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(0.7);
+  }
+}
+/* Style for the image */
+.product-image {
+  transition: transform 0.3s ease; /* Smooth transition */
+}
+
+/* Hover effect for scaling the image */
+.product-image:hover {
+  transform: scale(1.04); /* Scale the image to 1.04 on hover */
+}
+
+/* Light Theme */
+:root {
+  --background-color: #ffffff;
+  --text-color: #000000;
+}
+
+/* Dark Theme */
+.dark {
+  --background-color: #000000;
+  --text-color: #ffffff;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
